@@ -1,0 +1,22 @@
+body {
+    background-color: powderblue;
+}
+h1 {
+    color: black;
+}
+p {
+    color: darkslategray;
+    border: 1px solid powderblue;
+    padding: 3px;
+}
+input{
+    border-bottom-width: thick;
+
+}
+tr{
+    color: black;
+}
+button{
+    border-style: double;
+}
+

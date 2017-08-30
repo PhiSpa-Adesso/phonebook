@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Telephonebuch - Bearbeiten</h1>
+<form action="#" th:action="@{/showAll}" method="get">
+    <input type="submit" value="Alle Anzeigen"/>
+</form>
+
+<form action="#" th:action="@{/create}" method="get">
+    <input type="submit" value="Neu erstellen"/>
+</form>
+
+<form action="#" th:action="@{/searc}" method="get">
+    <input type="submit" value="Suche"/>
+</form>
+
+<form action="#" th:object="${person}" method="post">
+    <p>Name: <input type="text" th:field="*{name}"/></p>
+<p>Vorname: <input type="text" th:field="*{firstname}" /></p>
+<p>Tel.: <input type="tel" th:field="*{tele}"/></p>
+    <input type="submit" value="Übernehmen"/>
+</form>
+</body>
+</html>
