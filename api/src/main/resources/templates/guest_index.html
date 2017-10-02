@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+
+    <meta charset="UTF-8"/>
+    <title th:text="${MyStrings.getText('title')}"></title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+    <table class="table2">
+        <td class="table2">
+            <h1 th:text="${MyStrings.getText('title')}"></h1>
+        </td>
+        <td class="table2">
+            <a class="two" href="#" th:href="@{/lang/EN/index}" th:text="'EN'"></a>
+        </td>
+        <td class="table2">
+            <a class="two" href="#" th:href="@{/lang/DE/index}" th:text="'DE'"></a>
+        </td>
+    </table>
+
+
+
+</head>
+<ul class="menu">
+    <a class="highlight" href="#" th:href="@{/}" th:text="${MyStrings.getText('home')}"></a>
+    <a href="#" th:href="@{/showAll}" th:text="${MyStrings.getText('showall')}"></a>
+    <a href="#" th:href="@{/searc}" th:text="${MyStrings.getText('searc')}"></a>
+</ul>
+
+
+<body>
+
+<div th:if="${param.error}" th:text="${MyStrings.getText('invalidlogin')}"></div>
+<div th:if="${param.logout}" th:text="${MyStrings.getText('logoutsucces')}"></div>
+<form th:action="@{/index/login}" method="post">
+    <table>
+        <tr>
+            <td th:text="${MyStrings.getText('username')}"></td>
+            <td><input type="text" name="username" th:value="'admin'"/></td>
+        </tr>
+        <tr>
+            <td th:text="${MyStrings.getText('password')}"></td>
+            <td><input type="password" name="password"/></td>
+        </tr>
+    </table>
+    <input type="submit" th:value="${MyStrings.getText('login')}"/>
+</form>
+
+
+
+
+
+</body>
+</html>

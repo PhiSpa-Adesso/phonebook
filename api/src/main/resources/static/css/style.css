@@ -1,22 +1,60 @@
 body {
     background-color: powderblue;
+    padding-left: 1%;
+    padding-right: 1%
 }
 h1 {
     color: black;
+    text-align: center;
 }
 p {
     color: darkslategray;
     border: 1px solid powderblue;
     padding: 3px;
+    text-align: center;
 }
-input{
-    border-bottom-width: thick;
+table.table1, th.table1, td.table1 {
+    border: 1px solid black;
+}
+table.table2, th.table2, td.table2 {
+}
 
+th, td {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
-tr{
+a{
+    text-align: center;
+    color: purple;
+    font-size: large;
+    font-family: "Cooper Black";
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 3px solid darkgreen;
+    border-collapse: inherit;
+    background-color: powderblue;
+}
+a.highlight{
+    color: purple;
+    font-size: large;
+    font-family: "Cooper Black";
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 3px solid darkgreen;
+    border-collapse: inherit;
+    background-color: chartreuse;
+}
+a.two{
+    text-align: center;
     color: black;
-}
-button{
-    border-style: double;
+    font-size: medium;
+    font-family: "Cooper Black";
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid darkgreen;
+    border-collapse: inherit;
+    background-color: powderblue;
 }
 

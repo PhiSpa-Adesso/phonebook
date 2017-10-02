@@ -35,17 +35,21 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency><!--dependency von der layer drünber: data -->
-			<groupId>data</groupId>
-			<artifactId>data</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+
         <dependency>
             <groupId>com.phonebook.data</groupId>
             <artifactId>data</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-core</artifactId>
+		</dependency>
+		<dependency><!--dependency von der websecurety -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${MyStrings.getText('title')}"></title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+    <table class="table2">
+        <td class="table2">
+            <h1 th:text="${MyStrings.getText('title')}"></h1>
+        </td>
+        <td class="table2">
+            <a class="two" href="#" th:href="@{/lang/EN/create}" th:text="'EN'"></a>
+        </td>
+        <td class="table2">
+            <a class="two" href="#" th:href="@{/lang/DE/create}" th:text="'DE'"></a>
+        </td>
+        <td class="table2">
+            <form action="#" th:action="@{/logout}"  method="post">
+                <label th:inline="text" th:text="${MyStrings.getText('loginas')} + ' ' + ${#httpServletRequest.remoteUser}"></label>
+                <button  type="submit">
+                    <i th:text="${MyStrings.getText('logout')}"></i>
+                </button>
+            </form>
+        </td>
+    </table>
+</head>
+<ul class="menu">
+    <a href="#" th:href="@{/}" th:text="${MyStrings.getText('home')}"></a>
+    <a href="#" th:href="@{/showAll}" th:text="${MyStrings.getText('showall')}"></a>
+    <a class="highlight" href="#" th:href="@{/create}" th:text="${MyStrings.getText('createnew')}"></a>
+    <a href="#" th:href="@{/searc}" th:text="${MyStrings.getText('searc')}"></a>
+</ul>
+<body>
+<form action="#" th:action="@{/create}" th:object="${person}" method="post">
+    <table>
+        <tr>
+            <td th:text="${MyStrings.getText('name')}">:</td>
+            <td><input type="text" th:field="*{name}" th:placeholder="Mustermann"/></td>
+        </tr>
+        <tr>
+            <td th:text="${MyStrings.getText('firstname')}">:</td>
+            <td><input type="text" th:field="*{firstname}" th:placeholder="Max"/></td>
+        </tr>
+        <tr>
+            <td th:text="${MyStrings.getText('phone')}">:</td>
+            <td><input type="tel" th:field="*{tele}" th:placeholder="'017523456789'"/></td>
+        </tr>
+    </table>
+    <input type="submit" th:value="${MyStrings.getText('create')}"/>
+</form>
+</body>
+</html>
